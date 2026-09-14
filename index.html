@@ -45,43 +45,46 @@
       text-align: center;
     }
 
-    .logo-container {
-      margin-bottom: 15px;
-    }
-
-    .brand-logo {
-      max-height: 55px;
-      width: auto;
-      display: inline-block;
-    }
-
     .badge-alert {
       display: inline-block;
       background-color: #E02020;
       color: white;
       font-weight: bold;
-      font-size: 12px;
-      padding: 4px 12px;
+      font-size: 13px;
+      padding: 5px 14px;
       border-radius: 3px;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      margin-bottom: 12px;
+      margin-bottom: 20px;
     }
 
+    /* Título Principal com Logo Integrado */
     h1 {
       color: #E02020;
-      font-size: 32px;
+      font-size: 42px;
       letter-spacing: 1px;
       text-transform: uppercase;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
       border-bottom: 1px solid #334155;
-      padding-bottom: 15px;
+      padding-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .brand-logo {
+      height: 90px;
+      width: auto;
+      display: inline-block;
+      object-fit: contain;
     }
 
     .subtitle {
       color: #CBD5E1;
-      font-size: 16px;
-      max-width: 750px;
+      font-size: 18px;
+      max-width: 800px;
       margin: 0 auto;
     }
 
@@ -93,11 +96,11 @@
     }
 
     .section-title {
-      font-size: 20px;
+      font-size: 22px;
       color: white;
-      border-left: 4px solid #E02020;
-      padding-left: 10px;
-      margin: 35px 0 20px 0;
+      border-left: 5px solid #E02020;
+      padding-left: 12px;
+      margin: 40px 0 20px 0;
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
@@ -111,16 +114,16 @@
 
     div.card {
       background-color: #1E293B;
-      padding: 20px;
+      padding: 22px;
       border-radius: 6px;
       border: 1px solid #334155;
-      border-top: 3px solid #E02020;
+      border-top: 4px solid #E02020;
     }
 
     div.card h3 {
       color: white;
-      font-size: 16px;
-      margin-bottom: 8px;
+      font-size: 17px;
+      margin-bottom: 10px;
     }
 
     div.card p {
@@ -134,7 +137,7 @@
       background-color: #1E293B;
       border: 1px solid #334155;
       border-radius: 6px;
-      padding: 20px;
+      padding: 25px;
     }
 
     ul {
@@ -143,10 +146,10 @@
     }
 
     ul li {
-      padding: 10px 0;
+      padding: 12px 0;
       border-bottom: 1px solid #334155;
       color: #CBD5E1;
-      font-size: 14px;
+      font-size: 15px;
     }
 
     ul li:last-child {
@@ -162,25 +165,25 @@
       background-color: #1E293B;
       border: 2px dashed #FACC15;
       border-radius: 6px;
-      padding: 25px;
-      margin-top: 30px;
+      padding: 30px;
+      margin-top: 35px;
     }
 
     .protocol-header {
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
 
     .protocol-header h2 {
       color: #FACC15;
-      font-size: 22px;
+      font-size: 24px;
       letter-spacing: 1px;
       text-transform: uppercase;
     }
 
     .protocol-header p {
       color: #CBD5E1;
-      font-size: 13px;
+      font-size: 14px;
     }
 
     .protocol-grid {
@@ -191,15 +194,15 @@
 
     .protocol-item {
       background-color: #0F172A;
-      padding: 15px;
+      padding: 18px;
       border-radius: 4px;
-      border-left: 3px solid #FACC15;
+      border-left: 4px solid #FACC15;
     }
 
     .protocol-item h4 {
       color: white;
-      font-size: 14px;
-      margin-bottom: 5px;
+      font-size: 15px;
+      margin-bottom: 6px;
     }
 
     .protocol-item p {
@@ -211,11 +214,11 @@
     /* Rodapé Institucional */
     footer {
       max-width: 1000px;
-      margin: 40px auto 0 auto;
+      margin: 50px auto 0 auto;
       padding: 20px;
       text-align: center;
       border-top: 1px solid #334155;
-      font-size: 12px;
+      font-size: 13px;
       color: #64748B;
     }
   </style>
@@ -229,13 +232,14 @@
   </div>
 
   <header>
-    <!-- Logotipo ARUP posicionado no topo da página -->
-    <div class="logo-container">
-      <img src="ARUP.png" alt="Logotipo ARUP" class="brand-logo">
-    </div>
-
     <span class="badge-alert">Alerta de Alto Risco</span>
-    <h1>ARUP // SEGURANÇA DIGITAL</h1>
+    
+    <!-- Imagem ARUP.png inserida diretamente no título com tamanho ampliado -->
+    <h1>
+      <img src="ARUP.png" alt="ARUP" class="brand-logo">
+      <span>// SEGURANÇA DIGITAL</span>
+    </h1>
+    
     <p class="subtitle">Campanha de Conscientização e Prevenção Contra Golpes de Inteligência Artificial e Deepfakes Avançados</p>
   </header>
 
