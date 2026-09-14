@@ -2,66 +2,301 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Arup - Alerta Deepfake</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arup | Alerta Institucional de Cibersegurança</title>
   <style>
-    
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       background-color: #0F172A;
       color: white;
-      font-family: Arial, sans-serif;
-      padding: 20px;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      padding-bottom: 40px;
+    }
+
+    /* Barra Superior de Governo / Institucional */
+    .gov-bar {
+      background-color: #0B1120;
+      border-bottom: 2px solid #E02020;
+      padding: 8px 20px;
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #94A3B8;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .gov-bar span strong {
+      color: white;
+    }
+
+    /* Cabeçalho Principal */
+    header {
+      max-width: 1000px;
+      margin: 30px auto 20px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .badge-alert {
+      display: inline-block;
+      background-color: #E02020;
+      color: white;
+      font-weight: bold;
+      font-size: 12px;
+      padding: 4px 12px;
+      border-radius: 3px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
     }
 
     h1 {
       color: #E02020;
-      text-align: center;
+      font-size: 32px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #334155;
+      padding-bottom: 15px;
     }
 
-    p {
-      text-align: center;
+    .subtitle {
+      color: #CBD5E1;
+      font-size: 16px;
+      max-width: 750px;
+      margin: 0 auto;
     }
 
-    div {
+    /* Layout do Conteúdo */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      font-size: 20px;
+      color: white;
+      border-left: 4px solid #E02020;
+      padding-left: 10px;
+      margin: 35px 0 20px 0;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Grid de Ameaças */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 15px;
+    }
+
+    div.card {
       background-color: #1E293B;
-      padding: 15px;
-      margin: 10px 0;
-      border-radius: 5px;
+      padding: 20px;
+      border-radius: 6px;
+      border: 1px solid #334155;
+      border-top: 3px solid #E02020;
+    }
+
+    div.card h3 {
+      color: white;
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    div.card p {
+      color: #94A3B8;
+      font-size: 14px;
+      text-align: left;
+    }
+
+    /* Caixa de Identificação */
+    .checklist-box {
+      background-color: #1E293B;
+      border: 1px solid #334155;
+      border-radius: 6px;
+      padding: 20px;
     }
 
     ul {
-      line-height: 2;
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      padding: 10px 0;
+      border-bottom: 1px solid #334155;
+      color: #CBD5E1;
+      font-size: 14px;
+    }
+
+    ul li:last-child {
+      border-bottom: none;
+    }
+
+    ul li b {
+      color: #FACC15;
+    }
+
+    /* Painel Oficial de Defesa */
+    .protocol-container {
+      background-color: #1E293B;
+      border: 2px dashed #FACC15;
+      border-radius: 6px;
+      padding: 25px;
+      margin-top: 30px;
+    }
+
+    .protocol-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .protocol-header h2 {
+      color: #FACC15;
+      font-size: 22px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .protocol-header p {
+      color: #CBD5E1;
+      font-size: 13px;
+    }
+
+    .protocol-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+    }
+
+    .protocol-item {
+      background-color: #0F172A;
+      padding: 15px;
+      border-radius: 4px;
+      border-left: 3px solid #FACC15;
+    }
+
+    .protocol-item h4 {
+      color: white;
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    .protocol-item p {
+      color: #94A3B8;
+      font-size: 13px;
+      text-align: left;
+    }
+
+    /* Rodapé Institucional */
+    footer {
+      max-width: 1000px;
+      margin: 40px auto 0 auto;
+      padding: 20px;
+      text-align: center;
+      border-top: 1px solid #334155;
+      font-size: 12px;
+      color: #64748B;
     }
   </style>
 </head>
 <body>
 
-  <h1>ARUP // SEGURANÇA DIGITAL</h1>
-  <p>Alerta: Golpes com Inteligência Artificial e Deepfakes</p>
-
-  <h2>⚠️ Principais Ameaças</h2>
-  
-  <div>
-    <h3>1. Clonagem de Voz (Vishing)</h3>
-    <p style="text-align: left;">Golpistas usam poucos segundos do seu áudio para imitar sua voz e pedir transferências urgentes.</p>
+  <!-- Barra Oficial Superior -->
+  <div class="gov-bar">
+    <span><strong>ARUP CYBERSECURITY</strong> // DIRETORIA DE SEGURANÇA DA INFORMAÇÃO</span>
+    <span>COMUNICADO INTERNO Nº 04/2026</span>
   </div>
 
-  <div>
-    <h3>2. Vídeo Falso em Chamadas</h3>
-    <p style="text-align: left;">Uso de máscaras de IA no Teams/Zoom para se passar por gestores e roubar projetos da Arup.</p>
+  <header>
+    <span class="badge-alert">Alerta de Alto Risco</span>
+    <h1>ARUP // SEGURANÇA DIGITAL</h1>
+    <p class="subtitle">Campanha de Conscientização e Prevenção Contra Golpes de Inteligência Artificial e Deepfakes Avançados</p>
+  </header>
+
+  <div class="container">
+
+    <!-- Seção de Ameaças -->
+    <h2 class="section-title">⚠️ Principais Ameaças Mapeadas</h2>
+    
+    <div class="grid">
+      <div class="card">
+        <h3>1. Clonagem de Voz (Vishing por IA)</h3>
+        <p>Ataques utilizam poucos segundos de áudios públicos para sintetizar a voz de executivos e solicitar transferências financeiras urgentes via chamada telefônica.</p>
+      </div>
+
+      <div class="card">
+        <h3>2. Vídeo Falso em Tempo Real</h3>
+        <p>Injeção de mídia sintética em videoconferências (Teams/Zoom) simulando presenças de diretores para autorização de transações e acesso a projetos confidenciais.</p>
+      </div>
+
+      <div class="card">
+        <h3>3. Engenharia Social Direcionada</h3>
+        <p>Uso de dados do rastro digital institucional para criar roteiros altamente convincentes, simulando auditorias secretas ou reuniões operacionais de emergência.</p>
+      </div>
+
+      <div class="card">
+        <h3>4. Adulteração de Dados de Pagamento</h3>
+        <p>Redirecionamento de fluxos financeiros através do envio de novas instruções bancárias falsas durante interações clonadas por inteligência artificial.</p>
+      </div>
+    </div>
+
+    <!-- Seção de Identificação -->
+    <h2 class="section-title">👁️ Como Identificar a Fraude</h2>
+    <div class="checklist-box">
+      <ul>
+        <li><b>Análise Visual:</b> Artefatos no rosto ao virar de lado, ausência de piscamento natural, inconsistência na iluminação da pele e sincronização labial imperfeita.</li>
+        <li><b>Análise de Áudio:</b> Tom robótico, ausência de ruídos de respiração, variações bruscas de volume ou pausas não naturais no meio de frases.</li>
+        <li><b>Pressão Psicológica:</b> Solicitações de extrema urgência, pedidos de sigilo absoluto ou exigência de desvio dos procedimentos padrões da empresa.</li>
+        <li><b>Solicitação Incomum:</b> Pedidos de envio de dados críticos, alteração de contas bancárias cadastradas ou aprovação individual de grandes montantes.</li>
+      </ul>
+    </div>
+
+    <!-- Seção de Protocolos de Defesa -->
+    <div class="protocol-container">
+      <div class="protocol-header">
+        <h2>🛡️ PROTOCOLO DE DEFESA E RESPOSTA ARUP</h2>
+        <p>Diretrizes obrigatórias para validação de identidade e aprovação de processos críticos.</p>
+      </div>
+
+      <div class="protocol-grid">
+        <div class="protocol-item">
+          <h4>1. Senha Verbal / Palavra-Chave</h4>
+          <p>Exija a verificação do código de segurança verbal pré-definido internamente antes de executar qualquer ordem recebida via vídeo ou áudio.</p>
+        </div>
+
+        <div class="protocol-item">
+          <h4>2. Validação Fora de Banda</h4>
+          <p>Desligue a chamada e entre em contato imediatamente com o solicitante através de um canal secundário oficial previamente homologado.</p>
+        </div>
+
+        <div class="protocol-item">
+          <h4>3. Dupla Alçada Financeira</h4>
+          <p>Nenhuma movimentação de recursos pode ser efetuada por decisão isolada. Toda transação exige dupla confirmação de gestores autorizados.</p>
+        </div>
+
+        <div class="protocol-item">
+          <h4>4. Notificação Imediata de Incidentes</h4>
+          <p>Em caso de suspeita ou tentativa de fraude, comunique imediatamente a equipe de Cibersegurança e isole o dispositivo utilizado.</p>
+        </div>
+      </div>
+    </div>
+
   </div>
 
-  <h2>👁️ Como Identificar a Fraude</h2>
-  <ul>
-    <li><b>Visual:</b> O rosto da pessoa borra ao virar de lado ou ela quase não pisca.</li>
-    <li><b>Áudio:</b> Voz robótica, sem barulho de respiração ou com pausas estranhas.</li>
-    <li><b>Pressão:</b> Pedidos urgentes de dinheiro ou envio de arquivos sigilosos.</li>
-  </ul>
-
-  <div style="border: 2px dashed #FACC15; text-align: center;">
-    <h2 style="color: #FACC15;">🛡️ PROTOCOLO DE DEFESA ARUP</h2>
-    <p><b>1. Senha Verbal:</b> Exija a palavra-chave interna antes de qualquer ação.</p>
-    <p><b>2. Checagem Dupla:</b> Desligue e ligue de volta no número oficial da empresa.</p>
-  </div>
+  <footer>
+    <p>Arup Group Services © 2026 — Departamento de Segurança da Informação e Conformidade Tecnológica.</p>
+  </footer>
 
 </body>
 </html>
