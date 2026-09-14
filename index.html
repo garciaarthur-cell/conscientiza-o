@@ -19,7 +19,7 @@
       padding-bottom: 40px;
     }
 
-    /* Barra Superior de Governo / Institucional */
+    /* Barra Superior Institucional */
     .gov-bar {
       background-color: #0B1120;
       border-bottom: 2px solid #E02020;
@@ -58,7 +58,6 @@
       margin-bottom: 25px;
     }
 
-    /* Título Principal com Logo Ampliado */
     h1 {
       color: #E02020;
       font-size: 42px;
@@ -104,6 +103,42 @@
       margin: 40px 0 20px 0;
       text-transform: uppercase;
       letter-spacing: 0.5px;
+    }
+
+    /* Bloco da Empresa e Incidente */
+    .intro-box {
+      background-color: #1E293B;
+      border: 1px solid #334155;
+      border-radius: 6px;
+      padding: 25px;
+      margin-bottom: 30px;
+    }
+
+    .intro-box h3 {
+      color: #FACC15;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .intro-box p {
+      color: #CBD5E1;
+      font-size: 15px;
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+
+    .case-summary {
+      background-color: #0F172A;
+      border-left: 4px solid #E02020;
+      padding: 15px;
+      border-radius: 4px;
+      margin-top: 15px;
+    }
+
+    .case-summary h4 {
+      color: #E02020;
+      font-size: 16px;
+      margin-bottom: 8px;
     }
 
     /* Grid de Ameaças */
@@ -240,12 +275,25 @@
       <span>// SEGURANÇA DIGITAL</span>
     </h1>
     
-    <p class="subtitle">Como nós da ARUP combatemos as novas ameaças virtuais e o que você precisa fazer no seu dia a dia para proteger nossas operações contra golpes de Inteligência Artificial e Deepfakes.</p>
+    <p class="subtitle">Conheça o caso que transformou a cibersegurança global e entenda como proteger a ARUP contra ataques de Inteligência Artificial.</p>
   </header>
 
   <div class="container">
 
-    <!-- Seção de Ameaças -->
+    <!-- PARTE 1: Apresentação da Empresa e Ocorrido -->
+    <h2 class="section-title">🏢 Quem Somos e O Ocorrido</h2>
+    <div class="intro-box">
+      <h3>Nossa História e Compromisso</h3>
+      <p>Nós da <strong>ARUP</strong> somos uma multinacional voltada para engenharia, design e consultoria técnica global. Desenvolvemos projetos inovadores ao redor do mundo e, por gerenciarmos operações de alto impacto e grandes volumes financeiros, a nossa infraestrutura e a nossa equipe tornaram-se alvos de ataques cibernéticos cada vez mais refinados.</p>
+
+      <div class="case-summary">
+        <h4>🚨 O Caso de Alerta: O Golpe dos US$ 25,6 Milhões</h4>
+        <p>Recentemente, enfrentamos um dos ataques de engenharia social mais avançados da história digital em nossa filial de Hong Kong. Um funcionário do setor financeiro recebeu um e-mail urgente sobre uma transação confidencial e foi convocado para uma videoconferência. Na tela, ele interagiu com o Diretor Financeiro (CFO) e outros colegas de trabalho — ou assim parecia.</p>
+        <p>Na realidade, <strong>todos os participantes da chamada eram clones digitais (Deepfakes)</strong> gerados por Inteligência Artificial em tempo real. Enganado pela perfeita verossimilhança dos rostos e vozes, o colaborador seguiu as orientações e autorizou 15 transferências bancárias, somando o prejuízo de <strong>US$ 25,6 milhões</strong>.</p>
+      </div>
+    </div>
+
+    <!-- PARTE 2: Conscientização e Prevenção -->
     <h2 class="section-title">⚠️ As Ameaças que Enfrentamos e Você Precisa Conhecer</h2>
     
     <div class="grid">
@@ -270,18 +318,16 @@
       </div>
     </div>
 
-    <!-- Seção de Identificação -->
     <h2 class="section-title">👁️ O que Você Deve Observar para Não Ser Enganado</h2>
     <div class="checklist-box">
       <ul>
         <li><b>Análise Visual:</b> Em videoconferências, preste atenção se o rosto da pessoa borra ao se movimentar de lado, se a iluminação da pele muda de repente ou se o movimento da boca não encaixa perfeitamente na fala.</li>
-        <li><b>Análise de Áudio:</b> Fique atento ao tom de voz. Vozes clonadas por IA podem sobrar ligeiramente robóticas, sem ruídos de respiração natural ou com pausas estranhas no meio das frases.</li>
+        <li><b>Análise de Áudio:</b> Fique atento ao tom de voz. Vozes clonadas por IA podem soar ligeiramente robóticas, sem ruídos de respiração natural ou com pausas estranhas no meio das frases.</li>
         <li><b>Pressão Psicológica:</b> Se a pessoa do outro lado exigir sigilo absoluto, urgência extrema e pedir para você pular os procedimentos formais da ARUP, acione imediatamente o seu alerta.</li>
         <li><b>Solicitações Incomuns:</b> Nunca aceite pedidos fora da rotina, como alteração repentina de chave PIX ou conta bancária de parceiros, sem consultar nossa equipe de compliance.</li>
       </ul>
     </div>
 
-    <!-- Seção de Protocolos de Defesa -->
     <div class="protocol-container">
       <div class="protocol-header">
         <h2>🛡️ PROTOCOLO ARUP: COMO NÓS AGIMOS E COMO VOCÊ DEVE PROCEDER</h2>
